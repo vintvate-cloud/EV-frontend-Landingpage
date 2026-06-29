@@ -31,8 +31,12 @@ gsap.ticker.lagSmoothing(0) // Prevent lag spikes from throwing off scrub
 
 // ─────────────────────────────────────────────────────────────────────────────
 
+import GlobalPreloader from './components/GlobalPreloader'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <GlobalPreloader>
+      <App />
+    </GlobalPreloader>
   </StrictMode>,
 )
